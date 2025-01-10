@@ -2,8 +2,6 @@
 
 A breakdown of the requirements of this program
 
-
-
 @req-001
 As an user, I should be able to launch and execute the program via command line.
 
