@@ -24,7 +24,7 @@ git clone https://github.com/evan-qin-xu/phonewords.git
 cd phonewords
 ```
 
-* Launch the program
+* To launch the program
 ```
 ./gradle run
 ```
@@ -42,8 +42,7 @@ e.g.
 ```
 ./gradlew run -Pdictionary=/Users/username/Desktop/my_dictionary.txt --console=plain
 ```
-* To exit the program
-Use
+* To exit the program use
 ```
 exit
 ```
@@ -52,4 +51,4 @@ exit
 Please send an email to [Evan Xu](mailto:evan.xuqin@gmail.com)
 
 ## Author
-[@Evan Xu](evan.xuqin@gmail.com) &copy; All Rights Reserved
+@Evan Xu &copy; All Rights Reserved
