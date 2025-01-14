@@ -6,8 +6,11 @@ import static com.evanxu.util.Constants.EXIT_MESSAGE;
 import static com.evanxu.util.Constants.USER_INPUT_PROMPT;
 import static com.evanxu.util.Constants.WELCOME_MSG;
 
+import java.util.List;
 import java.util.Scanner;
 
+import com.evanxu.IPhonewordsGenerator;
+import com.evanxu.PhonewordsGenerator;
 import com.evanxu.dictionary.Dictionary;
 import com.evanxu.dictionary.DictionaryLoader;
 import com.evanxu.dictionary.IDictionary;
@@ -22,6 +25,9 @@ public class CommandLineHandler implements IInputHandler {
 
 	/** Dictionary. */
 	private IDictionary dictionary;
+	
+	/** Phonewords generator. */
+	IPhonewordsGenerator generator;
 
 	/**
 	 * Constructor.
@@ -32,6 +38,7 @@ public class CommandLineHandler implements IInputHandler {
 		this.scanner = new Scanner(System.in);
 		this.dictionary = new Dictionary();
 		DictionaryLoader.loadDictionary(dictPath, dictionary);
+		generator = new PhonewordsGenerator();
 	}
 
 	@Override
@@ -53,7 +60,7 @@ public class CommandLineHandler implements IInputHandler {
 	}
 
 	/**
-	 * Generates the phone words and prints them to the console.
+	 * Generates the phonewords and prints them to the console.
 	 * 
 	 * @param input the user input
 	 */
@@ -65,9 +72,8 @@ public class CommandLineHandler implements IInputHandler {
 
 		/* Remove all non-digit characters. */
 		String inputNumber = input.replaceAll(DIGITS, EMPTY_STR);
-
-		System.out.println("You entered: " + inputNumber.toUpperCase());
-		System.out.println("Dictioanry " + dictionary.toString());
+		List<String> phonewords = generator.generateDictionaryWords(inputNumber, dictionary);
+		phonewords.forEach(w -> System.out.println(w));
 	}
 
 	@Override
