@@ -30,7 +30,7 @@ public class App {
 			LOGGER.info(() -> "Loading custom dictionary from " + dictPath);
 		} else {
 			dictPath = DEFAULT_DICTIONARY_FILE_PATH;
-			LOGGER.info(() -> "Loading default dictionary from" + dictPath);
+			LOGGER.info(() -> "Loading default dictionary");
 		}
 
 		CommandLineHandler inputHandler = new CommandLineHandler(dictPath);
