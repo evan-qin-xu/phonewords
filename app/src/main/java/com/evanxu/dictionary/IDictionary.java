@@ -2,6 +2,9 @@ package com.evanxu.dictionary;
 
 import java.util.Set;
 
+/**
+ * The dictionary interface.
+ */
 public interface IDictionary {
 	/**
 	 * Retrieves the dictionary words.
@@ -9,7 +12,7 @@ public interface IDictionary {
 	 * @return the dictionary words
 	 */
 	Set<String> getWords();
-	
+
 	/**
 	 * Adds a word to the dictionary.
 	 * 

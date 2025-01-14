@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.evanxu;
 
 import static com.evanxu.util.Constants.DEFAULT_DICTIONARY_FILE_PATH;
@@ -17,15 +14,17 @@ import org.junit.Test;
 import com.evanxu.dictionary.Dictionary;
 import com.evanxu.dictionary.DictionaryLoader;
 import com.evanxu.dictionary.IDictionary;
+import com.evanxu.generator.IPhonewordsGenerator;
+import com.evanxu.generator.PhonewordsGenerator;
 
 /**
- * Unit test for the @{link {@link PhoneWordsGenerator}.
+ * Unit test for the @{link {@link PhonewordsGenerator}.
  */
 public class PhonewordsGeneratorTest {
 
 	/** The phone words generator. */
 	IPhonewordsGenerator generator;
-	
+
 	/** Dictionary. */
 	private IDictionary dictionary;
 

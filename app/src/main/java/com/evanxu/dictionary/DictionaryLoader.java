@@ -7,13 +7,20 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-import com.evanxu.util.Constants;
-
+/**
+ * Utility loader for the dictionary.
+ */
 public class DictionaryLoader {
 	
 	/** Logger. */
 	private static final Logger LOGGER = Logger.getLogger(DictionaryLoader.class.getName());
-
+	
+	/**
+	 * Loads the dictionary.
+	 * 
+	 * @param filePath the dictionary file path
+	 * @param dictionary the dictionary
+	 */
     public static void loadDictionary(String filePath, IDictionary dictionary) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;

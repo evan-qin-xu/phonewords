@@ -9,11 +9,11 @@ import static com.evanxu.util.Constants.WELCOME_MSG;
 import java.util.List;
 import java.util.Scanner;
 
-import com.evanxu.IPhonewordsGenerator;
-import com.evanxu.PhonewordsGenerator;
 import com.evanxu.dictionary.Dictionary;
 import com.evanxu.dictionary.DictionaryLoader;
 import com.evanxu.dictionary.IDictionary;
+import com.evanxu.generator.IPhonewordsGenerator;
+import com.evanxu.generator.PhonewordsGenerator;
 
 /**
  * A command line handler to handle user input for generating the phonewords.
@@ -25,7 +25,7 @@ public class CommandLineHandler implements IInputHandler {
 
 	/** Dictionary. */
 	private IDictionary dictionary;
-	
+
 	/** Phonewords generator. */
 	IPhonewordsGenerator generator;
 

@@ -1,4 +1,4 @@
-package com.evanxu;
+package com.evanxu.generator;
 
 import java.util.ArrayList;
 import java.util.HashMap;

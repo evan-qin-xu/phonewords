@@ -3,6 +3,9 @@ package com.evanxu.dictionary;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Class for storing the dictionary.
+ */
 public class Dictionary implements IDictionary{
 	
 	/** Unique Dictionary words. */
