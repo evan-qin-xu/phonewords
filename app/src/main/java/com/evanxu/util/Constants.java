@@ -11,7 +11,7 @@ public class Constants {
 	public static final String USER_INPUT_PROMPT = "Enter your number: ";
 
 	/** Exit message. */
-	public static final String EXIT_MESSAGE = "Exiting... Thanks for using the phonewords app! To relaunch, use './gradlew run'";
+	public static final String EXIT_MESSAGE = "Exiting... Thanks for using the phonewords app!";
 
 	/** Regex for matching digits. */
 	public static final String DIGITS = "\\D";
