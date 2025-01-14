@@ -30,12 +30,26 @@ cd phonewords
 ```
 
 ### Executing the program
-TODO
+* To run with default dictionary file
+```
+./gradlew run --console=plain
+```
+* To run with a custom dictionary file
+```
+./gradlew run -Pdictionary=<your-dictionary-file-path> --console=plain
+```
+e.g.
+```
+./gradlew run -Pdictionary=/Users/username/Desktop/my_dictionary.txt --console=plain
+```
+* To exit the program
+Use
+```
+exit
+```
 
 ## Help
-
-TODO
+Please send an email to [Evan Xu](mailto:evan.xuqin@gmail.com)
 
 ## Author
-
-[@Evan Xu](evan.xuqin@gmail.com)
+[@Evan Xu](evan.xuqin@gmail.com) &copy; All Rights Reserved
