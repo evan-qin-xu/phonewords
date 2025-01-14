@@ -3,24 +3,35 @@ package com.evanxu.handler;
 import static com.evanxu.util.Constants.DIGITS;
 import static com.evanxu.util.Constants.EMPTY_STR;
 import static com.evanxu.util.Constants.EXIT_MESSAGE;
-import static com.evanxu.util.Constants.USER_INPUT_PROMT;
+import static com.evanxu.util.Constants.USER_INPUT_PROMPT;
 import static com.evanxu.util.Constants.WELCOME_MSG;
 
 import java.util.Scanner;
 
+import com.evanxu.dictionary.Dictionary;
+import com.evanxu.dictionary.DictionaryLoader;
+import com.evanxu.dictionary.IDictionary;
+
 /**
- * A command line handler to handler user input for generating the phone-words.
+ * A command line handler to handle user input for generating the phonewords.
  */
 public class CommandLineHandler implements IInputHandler {
 
 	/** Input scanner. */
 	private Scanner scanner;
 
+	/** Dictionary. */
+	private IDictionary dictionary;
+
 	/**
 	 * Constructor.
+	 * 
+	 * @param dictPath the dictionary file path
 	 */
-	public CommandLineHandler() {
+	public CommandLineHandler(String dictPath) {
 		this.scanner = new Scanner(System.in);
+		this.dictionary = new Dictionary();
+		DictionaryLoader.loadDictionary(dictPath, dictionary);
 	}
 
 	@Override
@@ -28,7 +39,7 @@ public class CommandLineHandler implements IInputHandler {
 		System.out.println(WELCOME_MSG);
 
 		while (true) {
-			System.out.print(USER_INPUT_PROMT);
+			System.out.print(USER_INPUT_PROMPT);
 			String input = scanner.nextLine();
 
 			/* Exit the app. */
@@ -56,6 +67,7 @@ public class CommandLineHandler implements IInputHandler {
 		String inputNumber = input.replaceAll(DIGITS, EMPTY_STR);
 
 		System.out.println("You entered: " + inputNumber.toUpperCase());
+		System.out.println("Dictioanry " + dictionary.toString());
 	}
 
 	@Override
